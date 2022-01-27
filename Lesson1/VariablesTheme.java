@@ -21,25 +21,29 @@ public class VariablesTheme {
         System.out.println(uncoreFrequency);
         System.out.println(letter);
         System.out.println(isWorking);
+        System.out.println();
 
         //Расчет стоимости товара со скидкой
         System.out.println("Расчет стоимости товара со скидкой");
 
         double xPrice = 100.0;
         double yPrice = 200.0;
+        double discount = 11;
 
-        double discountAmount = (yPrice + xPrice) / 10;
+        double discountAmount = (yPrice + xPrice) * (discount / 100);
         double lastPrice = (xPrice + yPrice) - discountAmount;
         System.out.println("Стоимость со скидкой - " + lastPrice);
         System.out.println("Сумма скидки - " + discountAmount);
+        System.out.println();
 
         //Вывод на консоль слова JAVA
         System.out.println("Вывод на консоль слова JAVA");
 
         System.out.println("   J    a  v     v  a    ");
-        System.out.println("   J   a a  v   v  a a  ");
+        System.out.println("   J   a a  v   v  a a   ");
         System.out.println("J  J  aaaaa  V V  aaaaa  ");
-        System.out.println(" JJ  a     a  V  a     a");
+        System.out.println(" JJ  a     a  V  a     a ");
+        System.out.println();
 
         //Отображение min и max значений числовых типов данных
         System.out.println("Отображение min и max значений числовых типов данных");
@@ -54,30 +58,42 @@ public class VariablesTheme {
         System.out.println(maxInt);
         System.out.println(maxLong);
 
-//        byte maxByteIncreasedByOne = 128;
-//        short maxShortIncreasedByOne = 32_768;
-//        int maxIntIncreasedByOne = 2_147_483_648;
-//        long maxLongIncreasedByOne = 9_223_372_036_854_775_808L;
-//
-//        System.out.println(maxByteIncreasedByOne);
-//        System.out.println(maxShortIncreasedByOne);
-//        System.out.println(maxIntIncreasedByOne);
-//        System.out.println(maxLongIncreasedByOne);
+        byte maxByteIncreasedByOne = ++maxByte;
+        short maxShortIncreasedByOne = ++maxShort;
+        int maxIntIncreasedByOne = ++maxInt;
+        long maxLongIncreasedByOne = ++maxLong;
+
+        System.out.println(maxByteIncreasedByOne);
+        System.out.println(maxShortIncreasedByOne);
+        System.out.println(maxIntIncreasedByOne);
+        System.out.println(maxLongIncreasedByOne);
+
+        byte maxByteDecreasedByOne = --maxByte;
+        short maxShortDecreasedByOne = --maxShort;
+        int maxIntDecreasedByOne = --maxInt;
+        long maxLongDecreasedByOne = --maxLong;
+
+        System.out.println(maxByteDecreasedByOne);
+        System.out.println(maxShortDecreasedByOne);
+        System.out.println(maxIntDecreasedByOne);
+        System.out.println(maxLongDecreasedByOne);
+        System.out.println();
 
         //Перестановка значений переменных
         System.out.println("Перестановка значений переменных");
 
-        double firstVariable = 5.4;
-        double secondVariable = 3.68;
+        double firstNum = 5.4;
+        double secondNum = 3.68;
 
-        System.out.println(firstVariable + " " + secondVariable);
+        System.out.println(firstNum + " " + secondNum);
 
-        double thirdVariable = 0.0;
-        thirdVariable = secondVariable;
-        secondVariable = firstVariable;
-        firstVariable = thirdVariable;
+        double tmpNum = 0.0;
+        tmpNum = secondNum;
+        secondNum = firstNum;
+        firstNum = tmpNum;
 
-        System.out.println(firstVariable + " " + secondVariable);
+        System.out.println(firstNum + " " + secondNum);
+        System.out.println();
 
         //Вывод ASCII-символов и их кодов
         System.out.println("Вывод ASCII-символов и их кодов");
@@ -99,24 +115,22 @@ public class VariablesTheme {
         System.out.println(c + " in char equals " + cNumberChar);
         System.out.println(d + " in char equals " + dNumberChar);
         System.out.println(e + " in char equals " + eNumberChar);
+        System.out.println();
 
         //Произведение и сумма цифр числа
         System.out.println("Произведение и сумма цифр числа");
 
-        int startNumber = 345;
-        int summa = 0;
+        int startNum = 345;
+        int sum = 0;
         int composition = 1;
 
-        while (startNumber != 0) {
-            composition = composition * (startNumber % 10) ;
-            summa += startNumber % 10;
-            startNumber /= 10;
+        sum = (startNum % 10) + ((startNum/10) % 10) + ((startNum/100) % 10);
+        composition = (startNum % 10) * ((startNum/10) % 10) * ((startNum/100) % 10);
 
-        }
-
-        System.out.println(startNumber);
-        System.out.println(summa);
-        System.out.println(composition);
+        System.out.println(startNum);
+        System.out.println("Сумма цифр " + sum);
+        System.out.println("Произведение цифр " + composition);
+        System.out.println();
 
         //Вывод на консоль ascii-арт Дюка
         System.out.println("Вывод на консоль ascii-арт Дюка");
@@ -202,6 +216,7 @@ public class VariablesTheme {
         int units = taskNineNumber % 10;
 
         System.out.println("Число " + taskNineNumber + " состоит из " + hundreds + " + " + decades + " + " + units);
+        System.out.println();
 
         //Преобразование секунд
         System.out.println("Преобразование секунд");
