@@ -58,25 +58,25 @@ public class VariablesTheme {
         System.out.println(maxInt);
         System.out.println(maxLong);
 
-        byte maxByteIncreasedByOne = ++maxByte;
-        short maxShortIncreasedByOne = ++maxShort;
-        int maxIntIncreasedByOne = ++maxInt;
-        long maxLongIncreasedByOne = ++maxLong;
+        maxByte++;
+        maxShort++;
+        maxInt++;
+        maxLong++;
 
-        System.out.println(maxByteIncreasedByOne);
-        System.out.println(maxShortIncreasedByOne);
-        System.out.println(maxIntIncreasedByOne);
-        System.out.println(maxLongIncreasedByOne);
+        System.out.println(maxByte);
+        System.out.println(maxShort);
+        System.out.println(maxInt);
+        System.out.println(maxLong);
 
-        byte maxByteDecreasedByOne = --maxByte;
-        short maxShortDecreasedByOne = --maxShort;
-        int maxIntDecreasedByOne = --maxInt;
-        long maxLongDecreasedByOne = --maxLong;
+        maxByte--;
+        maxShort--;
+        maxInt--;
+        maxLong--;
 
-        System.out.println(maxByteDecreasedByOne);
-        System.out.println(maxShortDecreasedByOne);
-        System.out.println(maxIntDecreasedByOne);
-        System.out.println(maxLongDecreasedByOne);
+        System.out.println(maxByte);
+        System.out.println(maxShort);
+        System.out.println(maxInt);
+        System.out.println(maxLong);
         System.out.println();
 
         //Перестановка значений переменных
@@ -123,9 +123,12 @@ public class VariablesTheme {
         int startNum = 345;
         int sum = 0;
         int composition = 1;
+        int reminderByTenDivision = (startNum % 10);
+        int dividedByTenReminderByTenDivision = ((startNum/10) % 10);
+        int dividedByHundredReminderByTenDivision = ((startNum/100) % 10);
 
-        sum = (startNum % 10) + ((startNum/10) % 10) + ((startNum/100) % 10);
-        composition = (startNum % 10) * ((startNum/10) % 10) * ((startNum/100) % 10);
+        sum = reminderByTenDivision + dividedByTenReminderByTenDivision + dividedByHundredReminderByTenDivision;
+        composition = reminderByTenDivision * dividedByTenReminderByTenDivision * dividedByHundredReminderByTenDivision;
 
         System.out.println(startNum);
         System.out.println("Сумма цифр " + sum);
@@ -210,12 +213,12 @@ public class VariablesTheme {
         //Отображение сотен, десятков, единиц числа
         System.out.println("Отображение сотен, десятков, единиц числа");
 
-        int taskNineNumber = 123;
-        int hundreds = taskNineNumber / 100 * 100;
-        int decades = taskNineNumber % 100 / 10 * 10;
-        int units = taskNineNumber % 10;
+        int someNumber = 123;
+        int hundreds = someNumber / 100 * 100;
+        int decades = someNumber % 100 / 10 * 10;
+        int units = someNumber % 10;
 
-        System.out.println("Число " + taskNineNumber + " состоит из " + hundreds + " + " + decades + " + " + units);
+        System.out.println("Число " + someNumber + " состоит из " + hundreds + " + " + decades + " + " + units);
         System.out.println();
 
         //Преобразование секунд
