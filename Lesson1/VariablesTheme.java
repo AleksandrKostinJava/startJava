@@ -145,69 +145,14 @@ public class VariablesTheme {
         char roundBracketLeft = '(';
         char roundBracketRight = ')';
 
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(space);
-        System.out.println(backSlash);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(backSlash);
-        System.out.println(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(underScore);
-        System.out.print(roundBracketLeft);
-        System.out.print(space);
-        System.out.print(roundBracketRight);
-        System.out.print(underScore);
-        System.out.print(backSlash);
-        System.out.println(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(backSlash);
-        System.out.println(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(underScore);
-        System.out.print(underScore);
-        System.out.print(underScore);
-        System.out.print(slash);
-        System.out.print(backSlash);
-        System.out.print(underScore);
-        System.out.print(underScore);
-        System.out.print(underScore);
-        System.out.print(underScore);
-        System.out.print(backSlash);
+        System.out.println("" + space + space + space + space + space + space + space + slash + space + backSlash);
+        System.out.println("" + space + space + space + space + space + space + slash + space + space + space + backSlash);
+        System.out.println("" + space + space + space + space + space + slash + underScore + roundBracketLeft + space
+                              + roundBracketRight + underScore + backSlash);
+        System.out.println("" + space + space + space + space + slash + space + space + space + space + space + space
+                              + space + backSlash);
+        System.out.println("" + space + space + space + slash + underScore + underScore + underScore + slash + backSlash
+                              + underScore + underScore + underScore + underScore + backSlash);
         System.out.println();
 
         //Отображение сотен, десятков, единиц числа
