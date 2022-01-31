@@ -7,10 +7,6 @@ public class IfElseStatementTheme {
         System.out.println();
 
         int age = 0;
-        boolean isMale = true;
-        double height = 0.0;
-        String name = " ";
-        char firstLetterOfTheName;
 
         if (age > 20) {
             System.out.println("Возраст больше 20");
@@ -18,9 +14,13 @@ public class IfElseStatementTheme {
             System.out.println("Возраст меньше 20");
         }
 
+        boolean isMale = true;
+
         if (!isMale) {
             System.out.println("Женского пола");
         }
+
+        double height = 0.0;
 
         if (height < 1.80) {
             System.out.println("Рост меньше 1.80");
@@ -28,10 +28,13 @@ public class IfElseStatementTheme {
             System.out.println("Рост выше 1.80");
         }
 
-        firstLetterOfTheName = name.charAt(0);
-        if (firstLetterOfTheName == 'M') {
+        String name = " ";
+        char firstLetterOfName;
+
+        firstLetterOfName = name.charAt(0);
+        if (firstLetterOfName == 'M') {
             System.out.println("Первая буква имени М");
-        } else if (firstLetterOfTheName == 'I') {
+        } else if (firstLetterOfName == 'I') {
             System.out.println("Первая буква имени I");
         } else {
             System.out.println("Первая буква имени не M и не I");
@@ -74,16 +77,14 @@ public class IfElseStatementTheme {
         //Поиск общей цифры в числах
         System.out.println("Поиск общей цифры в числах");
 
-        int aNum = 175;
-        int bNum = 126;
+        int aNum = 465;
+        int bNum = 785;
 
         if ((aNum % 10) == (bNum % 10)) {
             System.out.println("У этих чисел одинаковое количество цифр в единицах");
-        }
-        if (((aNum / 10) % 10) == ((bNum / 10) % 10)) {
+        } else if (((aNum / 10) % 10) == ((bNum / 10) % 10)) {
             System.out.println("У этих чисел одинаковое количество цифр в десятках");
-        }
-        if (((aNum / 100) % 10) == ((bNum / 100) % 10)) {
+        } else if (((aNum / 100) % 10) == ((bNum / 100) % 10)) {
             System.out.println("У этих чисел одинаковое количество цифр в сотнях");
         }
         System.out.println();
@@ -159,85 +160,69 @@ public class IfElseStatementTheme {
         System.out.println(averageScore + " Средний балл по предметам");
         System.out.println(averagePercent + " Средний процент по предметам");
         System.out.println();
-        
+
         //Расчет прибыли (убытка)
         System.out.println("Расчет прибыли (убытка)");
 
-        int monthRentPrice = 5000;
-        int monthCostPrice = 9000;
-        int monthSellPrice = 15000;
-        int annualRentPrice = monthRentPrice * 12;
-        int annualCostPrice = monthCostPrice * 12;
-        int annualSentPrice = monthSellPrice * 12;
-        int endOutcome = annualSentPrice - (annualRentPrice + annualCostPrice);
+        int endOutcome = 15_000 * 12 - ((5_000 * 12) + (9_000 * 12));
         boolean isPositiveOutcome = endOutcome > 0;
         char endOutcomeSign;
 
         if (isPositiveOutcome) {
             endOutcomeSign = '+';
-        } else if (!isPositiveOutcome) {
-            endOutcomeSign = '-';
-        } else endOutcomeSign = ' ';
 
-        System.out.println("Итог продавца = " + endOutcomeSign + endOutcome);
-        System.out.println();
+            System.out.println("Итог продавца = " + endOutcomeSign + endOutcome);
+            System.out.println();
 
-        //*Определение существования треугольника
-        System.out.println("*Определение существования треугольника");
+            //*Определение существования треугольника
+            System.out.println("*Определение существования треугольника");
 
-        int aSide = 5;
-        int bSide = 5;
-        int cSide = 9;
-        double triangleAngleDegrees = 90;
-        char verticalLine = '|';
-        char backSlash = '\\';
-        char underScore = '_';
-        StringBuilder aSideShow = new StringBuilder();
-        StringBuilder bSideShow = new StringBuilder();
-        boolean isTrianglePossibleToExist = (aSide + bSide) > cSide || (bSide + cSide) > aSide || (aSide + cSide) > bSide;
-        double triangleSquare = (aSide * bSide) * (Math.sin(Math.toRadians(triangleAngleDegrees))) / 2;
+            int aSide = 5;
+            int bSide = 5;
+            int cSide = 9;
+            double triangleAngleDegrees = 90;
+            char verticalLine = '|';
+            char backSlash = '\\';
+            char underScore = '_';
+            boolean isTrianglePossibleToExist = (aSide + bSide) > cSide || (bSide + cSide) > aSide || (aSide + cSide) > bSide;
+            double triangleSquare = (aSide * bSide) * (Math.sin(Math.toRadians(triangleAngleDegrees))) / 2;
 
-        if (!isTrianglePossibleToExist) {
-            System.out.println("Треугольник с такими сторонами не может сущестовать");
-        } else System.out.println("Треугольник с такими сторонами может сущестовать");
+            if (!isTrianglePossibleToExist) {
+                System.out.println("Треугольник с такими сторонами не может сущестовать");
+            } else System.out.println("Треугольник с такими сторонами может сущестовать");
 
-        System.out.println("Площадь треугольника" + triangleSquare);
-        System.out.println();
+            System.out.println("Площадь треугольника " + triangleSquare);
+            System.out.println();
 
-        /*    Вывод в консоль не поборол, если можно пожалуйста на этом не зацикливаться, потому что время дорого)
+            System.out.println("|\\");
+            System.out.println("  \\");
+            System.out.println("|  \\");
+            System.out.println("    \\");
+            System.out.println("|    \\");
+            System.out.println("      \\");
+            System.out.println("|      \\");
+            System.out.println("        \\");
+            System.out.println("|__ _ _ _\\");
+            System.out.println();
 
-         for (int i = 0; i < bSide; i++) {
-            bSideShow.append(underScore).append(System.getProperty("line.separator"));
+            //Подсчет количества банкнот
+            System.out.println("Подсчет количества банкнот");
+
+            int sum = 567;
+            int countNominal50 = sum / 50;
+            int valueCountNominal50 = countNominal50 * 50;
+            int countNominal10 = (sum - (valueCountNominal50)) / 10;
+            int valueCountNominal10 = countNominal10 * 10;
+            int countNominal1 = (sum - (valueCountNominal50) - (valueCountNominal10));
+
+            System.out.println("Общая сумма - " + sum);
+            System.out.println("Банкноты по 50 - " + countNominal50);
+            System.out.println("Банкноты по 10 - " + countNominal10);
+            System.out.println("Банкноты по 1 - " + countNominal1);
+
+            int reverseCountSum = valueCountNominal50 + valueCountNominal10 + countNominal1;
+
+            System.out.println(reverseCountSum);
         }
-
-        for (int i = 0; i < aSide; i++) {
-            aSideShow.append(verticalLine).append(System.getProperty("line.separator"));
-        }
-
-        System.out.println(aSideShow);
-        System.out.println(bSideShow);
-
- */
-
-        //Подсчет количества банкнот
-        System.out.println("Подсчет количества банкнот");
-
-        int sum = 567;
-        int fiftyNominal = 50;
-        int tenNominal = 10;
-        int banknoteOfFiftyNominal = sum / fiftyNominal;
-        int sumOfFiftyNominalBanknotesValue = banknoteOfFiftyNominal * fiftyNominal;
-        int banknoteOfTenNominal = (sum - (sumOfFiftyNominalBanknotesValue)) / 10;
-        int sumOfTenNominalBanknotesValue = banknoteOfTenNominal * tenNominal;
-        int banknoteOfOneNominal = (sum - (sumOfFiftyNominalBanknotesValue) - (sumOfTenNominalBanknotesValue));
-
-        System.out.println("Общая сумма - " + sum);
-        System.out.println("Банкноты по 50 - " + banknoteOfFiftyNominal);
-        System.out.println("Банкноты по 10 - " + banknoteOfTenNominal);
-        System.out.println("Банкноты по 1 - " + banknoteOfOneNominal);
-
-        int reverseCountSum = sumOfFiftyNominalBanknotesValue + sumOfTenNominalBanknotesValue + banknoteOfOneNominal;
-
-        System.out.println(reverseCountSum);
     }
 }
