@@ -81,11 +81,11 @@ public class IfElseStatementTheme {
         int bNum = 785;
 
         if ((aNum % 10) == (bNum % 10)) {
-            System.out.println("У этих чисел одинаковое количество цифр в единицах");
+            System.out.println("У этих чисел равны цифры в единицах");
         } else if (((aNum / 10) % 10) == ((bNum / 10) % 10)) {
-            System.out.println("У этих чисел одинаковое количество цифр в десятках");
+            System.out.println("У этих чисел равны цифры в десятках");
         } else if (((aNum / 100) % 10) == ((bNum / 100) % 10)) {
-            System.out.println("У этих чисел одинаковое количество цифр в сотнях");
+            System.out.println("У этих чисел равны цифры в сотнях");
         }
         System.out.println();
 
@@ -164,65 +164,61 @@ public class IfElseStatementTheme {
         //Расчет прибыли (убытка)
         System.out.println("Расчет прибыли (убытка)");
 
-        int endOutcome = 15_000 * 12 - ((5_000 * 12) + (9_000 * 12));
-        boolean isPositiveOutcome = endOutcome > 0;
-        char endOutcomeSign;
+        int endOutcome = (15_000 - 5_000 - 9_000) * 12;
 
-        if (isPositiveOutcome) {
-            endOutcomeSign = '+';
+        if (endOutcome > 0) {
+            System.out.println("Итог продавца = +" + endOutcome);
+        } else System.out.println("Итог продавца = -" + endOutcome);
+        System.out.println();
 
-            System.out.println("Итог продавца = " + endOutcomeSign + endOutcome);
-            System.out.println();
+        //*Определение существования треугольника
+        System.out.println("*Определение существования треугольника");
 
-            //*Определение существования треугольника
-            System.out.println("*Определение существования треугольника");
+        int aSide = 5;
+        int bSide = 5;
+        int cSide = 9;
+        double triangleAngleDegrees = 90;
+        char verticalLine = '|';
+        char backSlash = '\\';
+        char underScore = '_';
+        boolean isTrianglePossibleToExist = (aSide + bSide) > cSide || (bSide + cSide) > aSide || (aSide + cSide) > bSide;
+        double triangleSquare = (aSide * bSide) * (Math.sin(Math.toRadians(triangleAngleDegrees))) / 2;
 
-            int aSide = 5;
-            int bSide = 5;
-            int cSide = 9;
-            double triangleAngleDegrees = 90;
-            char verticalLine = '|';
-            char backSlash = '\\';
-            char underScore = '_';
-            boolean isTrianglePossibleToExist = (aSide + bSide) > cSide || (bSide + cSide) > aSide || (aSide + cSide) > bSide;
-            double triangleSquare = (aSide * bSide) * (Math.sin(Math.toRadians(triangleAngleDegrees))) / 2;
+        if (!isTrianglePossibleToExist) {
+            System.out.println("Треугольник с такими сторонами не может сущестовать");
+        } else System.out.println("Треугольник с такими сторонами может сущестовать");
 
-            if (!isTrianglePossibleToExist) {
-                System.out.println("Треугольник с такими сторонами не может сущестовать");
-            } else System.out.println("Треугольник с такими сторонами может сущестовать");
+        System.out.println("Площадь треугольника " + triangleSquare);
+        System.out.println();
 
-            System.out.println("Площадь треугольника " + triangleSquare);
-            System.out.println();
+        System.out.println("|\\");
+        System.out.println("  \\");
+        System.out.println("|  \\");
+        System.out.println("    \\");
+        System.out.println("|    \\");
+        System.out.println("      \\");
+        System.out.println("|      \\");
+        System.out.println("        \\");
+        System.out.println("|__ _ _ _\\");
+        System.out.println();
 
-            System.out.println("|\\");
-            System.out.println("  \\");
-            System.out.println("|  \\");
-            System.out.println("    \\");
-            System.out.println("|    \\");
-            System.out.println("      \\");
-            System.out.println("|      \\");
-            System.out.println("        \\");
-            System.out.println("|__ _ _ _\\");
-            System.out.println();
+        //Подсчет количества банкнот
+        System.out.println("Подсчет количества банкнот");
 
-            //Подсчет количества банкнот
-            System.out.println("Подсчет количества банкнот");
+        int sum = 567;
+        int countNominal50 = sum / 50;
+        int valueCountNominal50 = countNominal50 * 50;
+        int countNominal10 = (sum - (valueCountNominal50)) / 10;
+        int valueCountNominal10 = countNominal10 * 10;
+        int countNominal1 = (sum - (valueCountNominal50) - (valueCountNominal10));
 
-            int sum = 567;
-            int countNominal50 = sum / 50;
-            int valueCountNominal50 = countNominal50 * 50;
-            int countNominal10 = (sum - (valueCountNominal50)) / 10;
-            int valueCountNominal10 = countNominal10 * 10;
-            int countNominal1 = (sum - (valueCountNominal50) - (valueCountNominal10));
+        System.out.println("Общая сумма - " + sum);
+        System.out.println("Банкноты по 50 - " + countNominal50);
+        System.out.println("Банкноты по 10 - " + countNominal10);
+        System.out.println("Банкноты по 1 - " + countNominal1);
 
-            System.out.println("Общая сумма - " + sum);
-            System.out.println("Банкноты по 50 - " + countNominal50);
-            System.out.println("Банкноты по 10 - " + countNominal10);
-            System.out.println("Банкноты по 1 - " + countNominal1);
+        int reverseCountSum = valueCountNominal50 + valueCountNominal10 + countNominal1;
 
-            int reverseCountSum = valueCountNominal50 + valueCountNominal10 + countNominal1;
-
-            System.out.println(reverseCountSum);
-        }
+        System.out.println(reverseCountSum);
     }
 }
