@@ -15,8 +15,8 @@ public class Cycle {
 
         int a = 6;
         while (a >= -6) {
-                System.out.print(a + " ");
-                a -= 2;
+            System.out.print(a + " ");
+            a -= 2;
         }
         System.out.println();
 
