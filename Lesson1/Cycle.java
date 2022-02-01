@@ -15,26 +15,24 @@ public class Cycle {
 
         int a = 6;
         while (a >= -6) {
-            if (a % 2 == 0) {
                 System.out.print(a + " ");
-            }
-            a--;
+                a -= 2;
         }
         System.out.println();
 
         //Подсчитайте с помощью цикла do-while сумму нечетных чисел от [10, 20]. Выведите ее на консоль
         System.out.println("Подсчитайте с помощью цикла do-while сумму нечетных чисел от [10, 20]. Выведите ее на консоль");
 
-        int count = 0;
+        int sumOdd = 0;
         int b = 10;
 
         do {
-            if (b % 2 != 0)
-            count += b;
+            if (b % 2 != 0) {
+                sumOdd += b;
+            }
             b++;
-        }
-        while (b <= 20);
+        } while (b <= 20);
 
-        System.out.println("Сумма нечетных чисел " + count);
+        System.out.println("Сумма нечетных чисел " + sumOdd);
     }
 }
