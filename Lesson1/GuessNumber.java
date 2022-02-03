@@ -16,10 +16,12 @@ public class GuessNumber {
                 System.out.println("Ваше число больше того, что загадал компьютер");
                 userNumber--;
                 computerNumber = userNumber / 5 + 4;
+                System.out.println("Ваше число " + userNumber);
             } else if (userNumber < computerNumber) {
                 System.out.println("Ваше число меньше того, что загадал компьютер");
                 userNumber++;
                 computerNumber = userNumber / 5 + 4;
+                System.out.println("Ваше число " + userNumber);
             }
         } while (userNumber != computerNumber);
 
