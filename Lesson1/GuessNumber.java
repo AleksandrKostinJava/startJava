@@ -1,41 +1,30 @@
 package Lesson1;
 
 public class GuessNumber {
-    /* Напишите игру Угадай число:
-компьютер "загадывает" целое число от (0 до 100], которое необходимо угадать
-после каждой неудачной попытки выводите подсказку:
-"Данное число больше того, что загадал компьютер" или
-"Данное число меньше того, что загадал компьютер"
-если число угадано — "Поздравляю, число угадано!"
-меняйте значение переменной, хранящей числа игрока, автоматически по какому-то простому алгоритму (без применения ввода с клавиатуры или генерации рандомных чисел)
-игра продолжается до тех пор, пока число не будет угадано
-Выведите в цикле символы кодировки Unicode (внимательно изучите тип char) в диапазоне [9398, 10178]. Если выводятся непонятные символы или ?, то используйте [33, 126]
-     */
-
     public static void main(String[] args) {
-        int a = 67;
-        int b = a / 10 + 2;
+        int userNumber = 17;
+        int computerNumber = 87;
 
-            System.out.println("Компьютер загадал число");
-            System.out.println("Ваше число " + a);
+        System.out.println("Компьютер загадал число");
+        System.out.println("Ваше число " + userNumber);
 
-            if (a <= 0) {
-                System.out.println("Угадайте число от 1 до 100");
-            } else if (b < a) {
+        do {
+            if (userNumber <= 0 || userNumber > 100) {
+                System.out.println("Ваше число должно быть от 1 до 100");
+                break;
+            } else if (userNumber > computerNumber) {
                 System.out.println("Ваше число больше того, что загадал компьютер");
-            } else if (b > a) {
+                userNumber--;
+                computerNumber = userNumber / 5 + 4;
+            } else if (userNumber < computerNumber) {
                 System.out.println("Ваше число меньше того, что загадал компьютер");
-            } else if (a > 100) {
-                System.out.println("Угадайте число от 1 до 100");
-            } else System.out.println("Поздравляю, вы угадали число");
-            System.out.println();
-
-        char c;
-        for (char i = 9398; i <= 10178; i++) {
-            if (i % 75 == 0) {
-                System.out.println();
+                userNumber++;
+                computerNumber = userNumber / 5 + 4;
             }
-            System.out.print(c = i);
+        } while (userNumber != computerNumber);
+
+        if (userNumber == computerNumber) {
+            System.out.println("Поздравляю, вы угадали число");
         }
     }
 }
